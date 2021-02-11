@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Practice</title>
+  <style>
+
+    body{
+      background-color: antiquewhite;
+      display:flex;
+      flex-wrap:wrap;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background:#5C3F1E;
+      cursor: pointer;
+      transition:0.8s;
+      margin:0 8px 8px 0;
+      text-align:center;
+      line-height:100px;
+    }
+
+    .welcome {
+      background:antiquewhite;
+      border-radius:50%;
+      transform:rotate(360deg);
+      font-weight:bold;
+      font-style:italic;
+    }
+
+    .none{
+      border-radius:50%;
+      transform:rotate(360deg);
+      transform:scale(0.9);
+    }
+
+  </style>
+</head>
+<body>
+
+  <script>
+    'use strict';
+
+    const num = 5;
+    const winner = Math.floor(Math.random() * num);//0-4
+
+    for(let i =0; i < num; i++){
+      const div = document.createElement('div');
+      div.classList.add('box');
+     
+
+
+      div.addEventListener('click', () => {
+      if (i===winner) {
+        div.textContent = 'Welcome!';
+        div.classList.add('welcome');
+        timeoutID = window.setTimeout( location.href = 'https://ja.wix.com/website-template/view/html/1800?siteId=91be7d41-a638-49df-8f3d-14c6d8b62d7e&metaSiteId=711ac440-f147-411a-8a2f-02becce6870c&originUrl=https%3A%2F%2Fja.wix.com%2Fwebsite%2Ftemplates%2Fhtml%2Frestaurants-food%2Fcafe-bakery', 300000 );
+
+      } else{
+        div.classList.add('none');
+      }
+    });
+
+      document.body.appendChild(div);
+    } 
+
+
+  </script>
+</body>
+</html>
